@@ -115,6 +115,7 @@ jobs:
 
           gh release create "${VERSION}" \
             --repo ${{ github.repository }} \
+            --target ${{ github.sha }} \
             --title "${VERSION}" \
             ${PRERELEASE_FLAG} \
             --notes-file notes.md \
